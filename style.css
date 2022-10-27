@@ -1,3 +1,8 @@
+:root {
+  --accent-font-color: rgb(203, 0, 0);
+}
+
+
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -188,7 +193,7 @@ table {
 }
 
 .red {
-  color: red;
+  color: var(--accent-font-color);
 }
 
 /* ---- Gauss info ---- */
@@ -206,21 +211,21 @@ table {
 }
 
 .gauss-info__right {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 
 .gauss-info__right-title {
   padding-left: 36px;
   margin-bottom: 35px;
   font-size: 14px;
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .gauss-info__right-item {
   display: flex;
   margin-bottom: 12px;
-	font-size: 14px;
-	line-height: 1.1;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 .gauss-info__right-icon {
@@ -229,7 +234,7 @@ table {
 }
 
 .gauss-info__right-item_center {
-	align-self: center;
+  align-self: center;
 }
 
 .gauss-info__right-icon>svg {
@@ -243,7 +248,7 @@ table {
 .gauss-info__left-address-1 {
   max-width: 220px;
   font-size: 16px;
-  padding: 5px;
+  padding-top: 5px;
   margin-bottom: 80px;
   color: gray;
 }
@@ -268,8 +273,8 @@ table {
 .gauss-statements-header__title {
   font-size: 24px;
   margin-bottom: 10px;
-	font-weight: 700;
-	color: black;
+  font-weight: 700;
+  color: black;
 }
 
 .gauss-statements-header__date {
@@ -277,124 +282,114 @@ table {
 }
 
 .gauss-statements-header__name {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .gauss-statements-header__account-number {
   align-self: center;
 }
 
-/* ---- Checking summary ------- */
+/* ---- Account summary ------- */
 
-.checking-summary {
-  margin-top: 80px;
+.account-summary {
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.checking-summary__info {
-  width: 60%;
+.account-summary__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-font-color);
 }
 
-.checking-summary__header {
-  border-bottom: 2px solid black;
-  margin-bottom: 5px;
+.account-summary__list {
+  max-width: 600px;
+  list-style-type: none;
+  font-size: 14px;
 }
 
-.checking-summary__title {
-  border: 2px solid black;
-  border-bottom: none;
-  padding: 5px;
-  padding-bottom: 3px;
-  width: 350px;
-  font-size: 18px;
-}
-
-.checking-summary__info-header {
-  font-weight: normal;
-  font-size: 12px;
-}
-
-.checking-summary__info-tr_bordered {
-  border-bottom: 2px solid black;
-}
-
-.checking-summary__info-tr td:first-child {
-  padding-top: 5px;
+.account-summary__list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 0 2px;
   padding-bottom: 5px;
+  border-bottom: 1px solid black;
 }
 
-.checking-summary__info-tr td:last-child {
-  text-align: end;
+.account-summary__list-item_accented {
+  color: #154c87;
+  font-weight: 700;
+  border: none;
 }
+
+
 
 .checking-summary__info-tr_bottom-20 td:first-child {
   padding-bottom: 24px;
 }
 
-/* ----- account info header ----- */
+/* ----- page top sign ----- */
 
-.account-info-header {
+.page-top-sign {
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
-  height: 50px;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 50px;
+  font-weight: 600;
 }
 
-.account-info-header__left {
-  align-self: end;
-}
+/* ----- deposits info ----- */
 
-.account-info-header__right {
-  width: 40%;
-  line-height: 1.7;
-  text-align: end;
-}
-
-/* ----- deposits header ----- */
-
-.deposits-header {
-  padding-left: 12px;
+.deposits-info {
   padding-bottom: 20px;
 }
 
-.deposits-header__title {
-  font-size: 28px;
-  font-weight: normal;
-  color: red;
+.deposits-info__header {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-font-color);
 }
 
-.deposits-header__table {
+.deposits-info__table {
   width: 100%;
+  margin-top: 5px;
 }
 
-.deposits-header__table-row {
+.deposits-info__table-row {
   font-size: 14px;
   vertical-align: top;
+  padding: 5px 0;
 }
 
-.deposits-header__table-row td {
-  padding: 10px 0;
+.deposits-info__table-row-head {
+  font-size: 12px;
+  vertical-align: top;
+  padding: 5px 0;
 }
 
-.deposits-header__table-row td:first-child {
+.deposits-info__table-row td {
+  padding: 7px 0;
+}
+
+.deposits-info__table-row td:first-child {
   padding: 10px 20px 10px 0;
 }
 
-.deposits-header__table-row td:last-child {
+.deposits-info__table-row td:last-child {
   padding: 10px 0 10px 20px;
 }
 
-.deposits-header__table-head th {
+.deposits-info__table-head th {
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 5px;
 }
 
-.deposits-header__table-total {
+.deposits-info__table-total {
   color: #285FA5;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* ---- Deposits content ----- */
@@ -451,7 +446,7 @@ table {
 .services-fees__title {
   font-size: 28px;
   font-weight: normal;
-  color: red;
+  color: var(--accent-font-color);
 }
 
 .services-fees__table {
@@ -499,28 +494,23 @@ table {
 /* ---- IMPORTANT INFORMATION ---- */
 
 .important-info-header {
-  display: flex;
   height: 70px;
   justify-content: space-between;
   margin-bottom: 20px;
+  color: var(--accent-font-color);
 }
 
-.important-info-header__left {
-  color: red;
-  align-self: flex-end;
-}
-
-.important-info-header__left h2 {
+.important-info-header__title {
   font-size: 24px;
+  font-weight: 700;
 }
 
-.important-info-header__left h3 {
+.important-info-header__sub-title {
   font-size: 22px;
 }
 
-.important-info-header__right {
-  font-size: 13px;
-  line-height: 1.7;
+.important-info {
+  font-size: 14px;
 }
 
 .important-info__p {

@@ -182,6 +182,10 @@ body {
   margin-top: 20px;
 }
 
+.margin-top-28 {
+  margin-top: 28px;
+}
+
 .dark-font {
   color: #221F20;
 }
@@ -234,13 +238,14 @@ table {
 
 .gauss-info__right-title {
   padding-left: 36px;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
   font-size: 14px;
   font-weight: 700;
 }
 
 .gauss-info__right-item {
   display: flex;
+  align-items: center;
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 1.1;
